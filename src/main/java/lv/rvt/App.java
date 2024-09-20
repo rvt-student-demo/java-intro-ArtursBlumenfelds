@@ -6,35 +6,44 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("Hello RVT!");
-        System.out.println("... and the universe!");
-        //sout = print
-        String name = "Artūrs";
-        int age = 20;
-        boolean isOnline = false;
+        //  System.out.println("Hello RVT!");
+        //  sout = print
+        //  String name = "Artūrs";
+        //  int age = 20;
+        //  boolean isOnline = false;
+        //  Scanner  scanneer = new Scanner(System.in);
+        //  String name1 = scanner.nextLine(); returns to ievadi
+        //  Scanner scanner = new Scanner(System.in);
+        //  String text = scanner.nextLine();
+        //  int integer = Integer.valueOf(scanner.nextLine());
+        //  double floatingPoint = Double.valueOf(scanner.nextLine());
+        //  boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
         
-        System.out.println(name);
-        System.out.println(age);
-        System.out.println(isOnline);
+        Scanner  scanneer = new Scanner(System.in);
 
-        // Scanner  scanneer = new Scanner(System.in);
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give the first number:");
         
-        System.out.println("Jūsu vards: ");
-        System.out.println("___");
-        String name1 = scanner.nextLine(); //returns to ievadi
+        int firstinteger = Integer.valueOf(scanneer.nextLine());
+        
+        
+        System.out.println("Give the second number:");
+        
+        Scanner  scanner = new Scanner(System.in);
 
-        System.out.println("Jūsu Uzvārds: ");
-        System.out.println("___");
-        String surname = scanner.nextLine();
+        int secondinteger = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Jūsu grupa: ");
-        System.out.println("___");
-        String group = scanner.nextLine();
+        String valueFirst = String.valueOf(firstinteger);
+        String valueSecond = String.valueOf(secondinteger);
 
-        System.out.println("Students: " + name1 + " " + surname + ", grupa: " + group);
+        int sum = firstinteger + secondinteger;
+        int minus = firstinteger - secondinteger;
+        int dev = firstinteger / secondinteger;
+        int mult = firstinteger * secondinteger;
 
-
-
+        System.out.println(firstinteger+ " + "+secondinteger+" = "+sum);
+        System.out.println(firstinteger+ " - "+secondinteger+" = "+minus);
+        System.out.println(firstinteger+ " / "+secondinteger+" = "+dev);
+        System.out.println(firstinteger+ " * "+secondinteger+" = "+mult);
     }
+
 }
