@@ -23,35 +23,37 @@ public class App
 
         
         
-        System.out.println("Give the points[0-100]:");
-        int points = Integer.valueOf(scanneer.nextLine());
-        if (points < 0)
+        System.out.println("Value of a gift?:");
+        int gift = Integer.valueOf(scanneer.nextLine());
+        if (gift < 5000)
         {
-            System.out.println("Impossible!");
+            System.out.println("No tax!");
         }
-        if (points > 0 && points <= 49){
-            System.out.println("failed");
+        if (gift >= 5000 && gift < 25000)
+        {
+            double f_tax = (100+(gift - 5000)*0.8);
+            System.out.println("Tax:" + f_tax);
         }
-        if (points >= 50 && points <= 59){
-            System.out.println("1");
+        if (gift >= 25000 && gift < 55000)    
+        {
+            double s_tax = (1700+(gift - 25000)*0.10);
+            System.out.println("Tax:" + s_tax);
         }
-        if (points >= 60 && points <= 69){
-            System.out.println("2");
+        if (gift >= 55000 && gift < 200000)    
+        {
+            double t_tax = (4700+(gift - 55000)*0.12);
+            System.out.println("Tax:" + t_tax);
         }
-        if (points >= 70 && points <= 79){
-            System.out.println("3");
+        if (gift >= 200000 && gift < 1000000)    
+        {
+            double fo_tax = (22100+(gift - 200000)*0.15);
+            System.out.println("Tax:" + fo_tax);
         }
-        if (points >= 80 && points <= 89){
-            System.out.println("4");
+        if (gift > 1000000)    
+        {
+            double fif_tax = (142100+(gift - 1000000)*0.8);
+            System.out.println("Tax:" + fif_tax);
         }
-        if (points >= 90 && points <= 100){
-            System.out.println("5");
-        }
-        if (points > 100){
-            System.out.println("incredible!");
-        }
-        
-        
 
 
     }
