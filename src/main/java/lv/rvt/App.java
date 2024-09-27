@@ -19,31 +19,23 @@ public class App
         //  double floatingPoint = Double.valueOf(scanner.nextLine());
         //  boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
         
-        Scanner  scanneer = new Scanner(System.in);
+        Scanner scanneer = new Scanner(System.in);
 
-        System.out.println("Give the first number:");
-        
-        int firstinteger = Integer.valueOf(scanneer.nextLine());
         
         
-        System.out.println("Give the second number:");
+        System.out.println("Give the speed:");
+        int speed = Integer.valueOf(scanneer.nextLine());
+        if (speed > 120)
+        {
+            System.out.println("Speeding ticket!");
+        }
+        else {
+            System.out.println("Your good to go!");
+        }
+
         
-        Scanner  scanner = new Scanner(System.in);
 
-        int secondinteger = Integer.valueOf(scanner.nextLine());
 
-        String valueFirst = String.valueOf(firstinteger);
-        String valueSecond = String.valueOf(secondinteger);
-
-        int sum = firstinteger + secondinteger;
-        int minus = firstinteger - secondinteger;
-        int dev = firstinteger / secondinteger;
-        int mult = firstinteger * secondinteger;
-
-        System.out.println(firstinteger+ " + "+secondinteger+" = "+sum);
-        System.out.println(firstinteger+ " - "+secondinteger+" = "+minus);
-        System.out.println(firstinteger+ " / "+secondinteger+" = "+dev);
-        System.out.println(firstinteger+ " * "+secondinteger+" = "+mult);
     }
 
 }
