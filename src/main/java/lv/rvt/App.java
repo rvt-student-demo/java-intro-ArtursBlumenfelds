@@ -19,33 +19,19 @@ public class App
         //  double floatingPoint = Double.valueOf(scanner.nextLine());
         //  boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
         
-        Scanner scaneer = new Scanner(System.in);
-        System.out.println("Give numbers:");
-        int sum = 0;
-        int hm = 0;
-        float avg = 0;
-        int odd = 0;
-        int even = 0;
-        while (true) {
-            int num = Integer.valueOf(scaneer.nextLine());
-            if(num == -1){
-                break;
-            }
-            sum = num + sum;
-            hm = hm + 1;
-            avg = sum / hm;
-            if(num % 2 == 0){
-                even = even + 1;
-            }
-            else{
-                odd = odd + 1;
-            }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many times?");
+        int integer = Integer.valueOf(scanner.nextLine());
+        int time = 0;
+        while (time < integer){
+            print();
+            time = time + 1;
         }
-        System.out.println("Thx!Bye!");
-        System.out.println("Sum:" + sum);
-        System.out.println("Numbers:" + hm);
-        System.out.println("Average:" + avg);
-        System.out.println("Even:" + even);
-        System.out.println("Odd:" + odd);
+       
     }
+    public static void print()
+    {    
+        System.out.println("In a hole in the ground there lived a method"); 
+    }
+
 }   
