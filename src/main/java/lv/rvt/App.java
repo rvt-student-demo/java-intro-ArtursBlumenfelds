@@ -19,26 +19,33 @@ public class App
         //  double floatingPoint = Double.valueOf(scanner.nextLine());
         //  boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
         
-        Scanner scanneer = new Scanner(System.in);
-
-        int numinp = -1;
-        int summ = 0;
-
-        while(true) 
-        {
-           
-            System.out.println("Give a number: ");
-            int integer = Integer.valueOf(scanneer.nextLine());
-            numinp = numinp + 1;
-            summ = summ + integer;
-            if(integer == 0){
+        Scanner scaneer = new Scanner(System.in);
+        System.out.println("Give numbers:");
+        int sum = 0;
+        int hm = 0;
+        float avg = 0;
+        int odd = 0;
+        int even = 0;
+        while (true) {
+            int num = Integer.valueOf(scaneer.nextLine());
+            if(num == -1){
                 break;
             }
+            sum = num + sum;
+            hm = hm + 1;
+            avg = sum / hm;
+            if(num % 2 == 0){
+                even = even + 1;
+            }
+            else{
+                odd = odd + 1;
+            }
         }
-
-        System.out.println("Number of numbers:" + numinp);
-        System.out.println("Sum of numbers:" + summ);
-
+        System.out.println("Thx!Bye!");
+        System.out.println("Sum:" + sum);
+        System.out.println("Numbers:" + hm);
+        System.out.println("Average:" + avg);
+        System.out.println("Even:" + even);
+        System.out.println("Odd:" + odd);
     }
-}
-
+}   
