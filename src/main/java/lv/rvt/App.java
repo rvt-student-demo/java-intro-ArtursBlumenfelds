@@ -19,22 +19,62 @@ public class App
         //  double floatingPoint = Double.valueOf(scanner.nextLine());
         //  boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
       
-        int temp;
-        int[] val = {0, 1, 2, 3}; 
+        Scanner scanneer = new Scanner(System.in);
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Integer> date = new ArrayList<>();
+        while (true) {
+            System.out.println("Enter a name and birth: ");
+            String nameBirth = scanneer.nextLine();
+            if (nameBirth.isEmpty()){
+                break;
+            }
+            String[] part = nameBirth.split(",");
+            String name = part[0];
+            int birthyear = Integer.parseInt(part[1]);
         
-        System.out.println( "Original Array: " 
-        + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
-    
-        temp = val[0];
-        val[0] = val[3];
-        val[3] = temp;
-        temp = val[1];
-        val[1] = val[2];
-        val[2] = temp;
-
-        System.out.println( "Reversed Array: " 
-            + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
-
+            names.add(name);
+            date.add(birthyear);
+        }
+        String longname = "";
+        for(String name : names){
+            if(name.length() > longname.length()){
+                longname = name;
+            }
+        }
+        int sum = 0;
+        for(int year : date){
+            sum += year;
+        }
+        
+        double avg = sum / (double) date.size();
+        System.out.println("Longest name: " + longname);
+        System.out.println("Average of the birth years: " + avg);
     }
-   
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
