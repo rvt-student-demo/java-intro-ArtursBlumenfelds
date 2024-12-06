@@ -1,7 +1,6 @@
 package lv.rvt;
 
 public class App {
-
         //  sout = print
         //  String name = "Artūrs";
         //  int age = 20;
