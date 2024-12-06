@@ -1,7 +1,5 @@
 package lv.rvt;
 
-import java.util.Scanner;
-
 public class App {
 
         //  sout = print
@@ -16,18 +14,31 @@ public class App {
         //  double floatingPoint = Double.valueOf(scanner.nextLine());
         //  boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
     
-    public static void main(String[] args) {
+    public class Main {
+
+        public static void main(String[] args) {
+            HealthStation childrensHospital = new HealthStation();
         
-        Product tapeMeasure = new Product("Tape measure");
-        Product plaster = new Product("Plaster", "home improvement section");
-        Product tyre = new Product("Tyre", 5);
+            Person ethan = new Person("Ethan", 1, 110, 7);
+            Person peter = new Person("Peter", 33, 176, 85);
         
-        System.out.println(tapeMeasure);
-        System.out.println(plaster);
-        System.out.println(tyre);
+            System.out.println("weighings performed: " + childrensHospital.weighings());
+        
+            childrensHospital.weigh(ethan);
+            childrensHospital.weigh(peter);
+        
+            System.out.println("weighings performed: " + childrensHospital.weighings());
+        
+            childrensHospital.weigh(ethan);
+            childrensHospital.weigh(ethan);
+            childrensHospital.weigh(ethan);
+            childrensHospital.weigh(ethan);
+        
+            System.out.println("weighings performed: " + childrensHospital.weighings());
+        
+        }
     }
 }
-
 
 
 
