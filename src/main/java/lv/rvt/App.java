@@ -1,4 +1,4 @@
-package lv.rvt;
+package lv.rvt;x
 
 public class App {
         //  sout = print
@@ -12,38 +12,31 @@ public class App {
         //  int integer = Integer.valueOf(scanner.nextLine());
         //  double floatingPoint = Double.valueOf(scanner.nextLine());
         //  boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
-    
-    public class Main {
 
-        public static void main(String[] args) {
-            HealthStation childrensHospital = new HealthStation();
-        
-            Person ethan = new Person("Ethan", 1, 110, 7);
-            Person peter = new Person("Peter", 33, 176, 85);
-        
-            System.out.println("weighings performed: " + childrensHospital.weighings());
-        
-            childrensHospital.weigh(ethan);
-            childrensHospital.weigh(peter);
-        
-            System.out.println("weighings performed: " + childrensHospital.weighings());
-        
-            childrensHospital.weigh(ethan);
-            childrensHospital.weigh(ethan);
-            childrensHospital.weigh(ethan);
-            childrensHospital.weigh(ethan);
-        
-            System.out.println("weighings performed: " + childrensHospital.weighings());
-        
-        }
-    }
+public static void main (String[] args)
+  {
+     Box box = new  Box( 2.5, 5.0, 6.0 );
+
+     Box box1 = new Box(2.5, 5.0, 6.0);
+     Box box2 = new Box(3.0, 6.0, 7.0);
+
+
+
+     Box biggerBox = box.biggerBox(box);
+
+     Box smallerBox = box.smallerBox(box);
+
+     System.out.println("Area: "  + box.area() + " volume: " + box.volume());
+
+     System.out.println("topArea: " + box.topArea());
+
+     System.out.println("Bigger Box Area: " + biggerBox.area() + " Volume: " + biggerBox.volume());
+
+     System.out.println("Smaller Box Area: " + smallerBox.area() + " Volume: " + smallerBox.volume());
+
+     System.out.println("Can box1 nests inside box2? " + box1.nests(box2));
+  }
 }
-
-
-
-
-
-
 
 
 
