@@ -1,4 +1,6 @@
-package lv.rvt;x
+package lv.rvt;
+
+import java.util.ArrayList;
 
 public class App {
         //  sout = print
@@ -13,30 +15,44 @@ public class App {
         //  double floatingPoint = Double.valueOf(scanner.nextLine());
         //  boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
 
-public static void main (String[] args)
-  {
-     Box box = new  Box( 2.5, 5.0, 6.0 );
+        public static void main (String[] args){
 
-     Box box1 = new Box(2.5, 5.0, 6.0);
-     Box box2 = new Box(3.0, 6.0, 7.0);
+        Person ada = new Person("Ada Lovelace ", "24 Maddox St. London W1S 2QN");
+        Person esko = new Person("Esko Ukkonen ", "Mannerheimintie 15 00100 Helsinki");
 
+        System.out.println(ada);
+        System.out.println(esko);
+        
 
+        Student ollie = new Student("Ollie ", "6381 Hollywood Blvd. Los Angeles 90028");
+        System.out.println(ollie);
+        ollie.study();
+        System.out.println("Study credits "+ ollie.credits());
 
-     Box biggerBox = box.biggerBox(box);
+        Teacher adaTeacher = new Teacher("Ada Lovelace ", "24 Maddox St. London W1S 2QN", 1200);
+        Teacher eskoTeacher = new Teacher("Esko Ukkonen ", "Mannerheimintie 15 00100 Helsinki", 5400);
+        System.out.println(adaTeacher);
+        System.out.println(eskoTeacher);
 
-     Box smallerBox = box.smallerBox(box);
+        Student ollieStudent = new Student("Ollie ", "6381 Hollywood Blvd. Los Angeles 90028");
 
-     System.out.println("Area: "  + box.area() + " volume: " + box.volume());
+        int i = 0;
+        while (i < 25) {
+        ollieStudent.study();
+        i = i + 1;
+        }
+        System.out.println(ollieStudent);
 
-     System.out.println("topArea: " + box.topArea());
+        System.out.println("_______________________");
 
-     System.out.println("Bigger Box Area: " + biggerBox.area() + " Volume: " + biggerBox.volume());
+        ArrayList<Person> persons = new ArrayList<Person>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
 
-     System.out.println("Smaller Box Area: " + smallerBox.area() + " Volume: " + smallerBox.volume());
+        System.out.println(persons);
+}       
+}       
 
-     System.out.println("Can box1 nests inside box2? " + box1.nests(box2));
-  }
-}
 
 
 
